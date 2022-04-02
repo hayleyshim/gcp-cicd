@@ -7,8 +7,7 @@ RUN apt-get -y update && \
     apt-get install -y telnet && \
     apt-get install -y wget
 
-RUN python -m pip install --upgrade pip
-    python -m pip install Flask
+RUN python -m pip install --upgrade pip && install Flask
 
 COPY . /app
 WORKDIR /app
