@@ -8,4 +8,4 @@ steps:
       - -c
       - >-
         pip install black==22.3.0 &&
-        black --check app.py
+        black app.py
