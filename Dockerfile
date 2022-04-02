@@ -7,7 +7,8 @@ RUN apt-get -y update && \
     apt-get install -y telnet && \
     apt-get install -y wget
 
-RUN python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip 
+RUN pip3 install flask 
 
 COPY . /app
 WORKDIR /app
@@ -15,4 +16,4 @@ WORKDIR /app
 ENTRYPOINT ["python"]
 CMD ["app.py"]
 
-EXPOSE 5000
+EXPOSE 8080
